@@ -1,0 +1,13 @@
+<div id="text">
+<button type="button" onclick="ajax()">Change Content</button>
+</div>
+<script>
+    function ajax() {
+    var xhttp = new XMLHttpRequest()
+    xhttp.onreadystatechange = function() {
+        document.getElementById("text").innerHTML = this.responseText;
+    }
+    xhttp.open("GET", "file.txt", true);
+    xhttp.send();
+}
+</script>
